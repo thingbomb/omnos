@@ -1,6 +1,6 @@
 {
   "name": "omnos",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "types": "./omnos.d.ts",
   "scripts": {},
@@ -16,5 +16,9 @@
   "exports": {
     "import": "./index.js",
     "require": "./index.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thingbomb/omnos.git"
   }
 }
