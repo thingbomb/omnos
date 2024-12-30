@@ -1,0 +1,20 @@
+{
+  "name": "omnos",
+  "version": "1.0.4",
+  "main": "index.js",
+  "types": "./omnos.d.ts",
+  "scripts": {},
+  "keywords": [
+    "js",
+    "utility",
+    "ts",
+    "tiny"
+  ],
+  "author": "George",
+  "license": "MIT",
+  "description": "Tiny utility functions for JavaScript.",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
+  }
+}
