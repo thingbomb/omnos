@@ -1,4 +1,4 @@
-declare function memo<T extends (...args: any[]) => Promise<any>>(fn: T): T;
+declare function memo<T extends (fn: Function) => Promise<any>>(fn: T): T;
 declare const colorCodes: { [key: string]: string };
 declare const colors: {
   [key in keyof typeof colorCodes]: (text: string) => string;
