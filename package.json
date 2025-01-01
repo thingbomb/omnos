@@ -1,6 +1,6 @@
 {
   "name": "omnos",
-  "version": "1.1",
+  "version": "1.1.0",
   "main": "index.js",
   "types": "./omnos.d.ts",
   "scripts": {},
