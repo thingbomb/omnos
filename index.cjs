@@ -2,7 +2,7 @@
  * Caches the result of an asynchronous function based on its arguments.
  *
  * @param {Function} fn - The asynchronous function to memoize.
- * @returns {Function} - A new function that returns cached results if available.
+ * @returns {any} - Returns the cached result if available, otherwise calls the function and returns the result.
  */
 function memo(fn) {
   const cache = new Map();
@@ -11,9 +11,16 @@ function memo(fn) {
     if (cache.has(key)) {
       return cache.get(key);
     }
-    const result = await fn(...args);
-    cache.set(key, result);
-    return result;
+    const promise = fn(...args);
+    cache.set(key, promise);
+    try {
+      const result = await promise;
+      cache.set(key, result);
+      return result;
+    } catch (error) {
+      cache.delete(key);
+      throw error;
+    }
   };
 }
 
