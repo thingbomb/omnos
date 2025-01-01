@@ -1,6 +1,6 @@
 {
   "name": "omnos",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "types": "./omnos.d.ts",
   "scripts": {},
@@ -15,7 +15,8 @@
   "description": "Tiny utility functions for JavaScript.",
   "exports": {
     "import": "./index.js",
-    "require": "./index.cjs"
+    "require": "./index.cjs",
+    "types": "./omnos.d.ts"
   },
   "repository": {
     "type": "git",
