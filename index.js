@@ -1,29 +1,3 @@
-/**
- * Caches the result of an asynchronous function based on its arguments.
- *
- * @param {Function} fn - The asynchronous function to memoize.
- * @returns {any} - Returns the cached result if available, otherwise calls the function and returns the result.
- */
-function memo(fn) {
-  const cache = new Map();
-  return async function (...args) {
-    const key = JSON.stringify(args);
-    if (cache.has(key)) {
-      return cache.get(key);
-    }
-    const promise = fn(...args);
-    cache.set(key, promise);
-    try {
-      const result = await promise;
-      cache.set(key, result);
-      return result;
-    } catch (error) {
-      cache.delete(key);
-      throw error;
-    }
-  };
-}
-
 const colorCodes = {
   reset: "\x1b[0m",
   bold: "\x1b[1m",
