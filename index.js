@@ -136,4 +136,4 @@ async function time(fn) {
   return Date.now() - start;
 }
 
-export { memo, shuffle, colors, delay, merge, capitalize, time };
+export { shuffle, colors, delay, merge, capitalize, time };
